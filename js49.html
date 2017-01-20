@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+		
+		console.log(camelize("background-color"));
+		console.log(camelize("list-style-image"));
+		console.log(camelize("-webkit-transition"));
+
+		function camelize(str) {
+			var strCam = str.split("-");
+			
+
+			for (var i = 1; i < strCam.length; i++) {
+				
+				strCam[i] = strCam[i].charAt(0).toUpperCase() + strCam[i].slice(1);
+				
+			}
+
+			return strCam.join("");
+		}
+	
+	</script>
+</body>
+</html>

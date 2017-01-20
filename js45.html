@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var arr = [5, 4, 3, 8, 0];
+
+		var filtered = filterRange(arr, 3, 5);
+
+		function filterRange(arr, a, b) {
+			var newArr = [];
+
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] >= a && arr[i] <= b) {
+					newArr.push(arr[i]);
+				}
+			}
+			return newArr;
+		}
+
+		alert(filtered);
+
+	</script>
+</body>
+</html>

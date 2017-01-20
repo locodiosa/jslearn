@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var x = +prompt("Дробное число:", "");
+		function getDecimal(num) {
+
+			var y = Math.round(num);
+			console.log("y = " + y);
+			var result = (num - y);
+			console.log("result = " + result);
+			return result.toFixed(2);
+		}
+		
+
+		alert(getDecimal(x));
+
+	</script>
+</body>
+</html>
