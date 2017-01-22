@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+		
+		var list = {
+			value: 1,
+			next: {
+				value: 2,
+				next: {
+					value: 3,
+					next: {
+						value: 4,
+						next: null
+					}
+				}
+			}
+		};
+
+		printList(list);
+		printReverseList(list);
+		printListRecursion(list);
+		printReverseListRecursion(list);
+
+		function printList(list) {
+			while (list != null) {
+				console.log(list.value);
+				list = list.next;
+			}
+		}
+
+		function printReverseList(list) {
+			var arrReverse = [];
+			while (list != null) {
+				arrReverse.push(list.value);
+				list = list.next;
+			}
+			
+			for (var i = arrReverse.length - 1; i >= 0; i--) {
+				console.log(arrReverse[i]);
+			}
+			
+
+		}
+
+		function printListRecursion(list) {
+			if (list != null) {
+				console.log(list.value);
+				printListRecursion(list.next);
+			}
+		}
+
+		function printReverseListRecursion(list) {
+			if (list != null) {
+				printReverseListRecursion(list.next);
+				console.log(list.value)
+			}
+		}
+		
+	</script>
+</body>
+</html>

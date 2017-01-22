@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+		
+		var arr = [5, 2, 1, -10, 8];
+
+		arr.sort(compareReversed);
+
+		function compareReversed(a, b) {
+			return b - a;
+		}
+
+		console.log(arr);
+
+	</script>
+</body>
+</html>
