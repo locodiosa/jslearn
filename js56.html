@@ -12,23 +12,20 @@
 		console.log(aclean(arr));
 
 		function aclean(arr) {
-			for (var i = 0; i < arr.length - 1; i++) {
-				if (isAnagram(arr[i], arr[i + 1])) {
-					arr.splice(arr[i + 1], 1);
-					console.log(arr);
-				}
+			var obj = {};
+
+			for (var i = 0; i < arr.length; i++) {
+				var className = arr[i].toUpperCase().split("").sort().join("");
+				obj[className] = arr[i];
 			}
-		}
 
-		function isAnagram(wordA, wordB) {
-			wordA.split("").forEach(function(letter) {
-				if (wordB.split("").indexOf(letter) != - 1) {
-					console.log(wordB.split("").splice(wordB.indexOf(letter), 1));
-				}
+			var result = [];
 
-			});
-			
-			
+			for (var key in obj) {
+				result.push(obj[key]);
+			}
+
+			return result;
 		}
 		
 
