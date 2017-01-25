@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var date = new Date(2012,0,3);
+
+		function getLocaleDate(date) {
+			var day = date.getDay();
+
+			if (day == 0) { // день 0 становится 7
+			    day = 7;
+			}
+
+			return day;
+		}
+
+		console.log(getLocaleDate(date));
+
+	</script>
+</body>
+</html>
