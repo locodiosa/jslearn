@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+		var date = new Date();
+
+		function  getSecondsToday() {
+			var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+			return Math.floor((date - today) / 1000);
+		}
+
+		function getSecondsToTomorrow() {
+			var today = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+			return Math.floor((today - date) / 1000);
+		}
+
+		console.log(getSecondsToday()); 
+		console.log(getSecondsToTomorrow());
+		
+	</script>
+</body>
+</html>
