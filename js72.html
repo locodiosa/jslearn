@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		"use strict";
+
+		function makeBuffer() { 
+			var text = "";
+
+			function buffer(piece) {
+				if (arguments.length == 0) {
+					return text;
+				} else {
+					text += piece;
+				}
+			}
+
+			buffer.clear = function() {
+				text = "";
+			}
+
+			return buffer;
+		}
+
+		var buffer = makeBuffer();
+
+		buffer("Тест");
+		buffer(" тебя не съест ");
+		console.log(buffer());
+
+		buffer.clear();
+		console.log(buffer());
+
+	</script>
+</body>
+</html>
